@@ -1,0 +1,30 @@
+.form label:has(input[type="number"]) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 3rem;
+    font-size: 20px;
+
+}
+
+button[type="submit"] {
+    width: 100%;
+    font-size: 20px;
+}
+
+input[type="number"]{
+    height: 30px;
+    font-size: 20px;
+}
