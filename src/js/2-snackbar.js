@@ -14,24 +14,24 @@ form.addEventListener("submit", (event)=>{
     let promise = new Promise((resolve, reject) => {
         setTimeout(() =>{
             if(selectedState == "fulfilled"){
-                resolve(`✅ Fulfilled promise in ${delay}ms`);
+                resolve(delay);
             } else {
-                reject(`❌ Rejected promise in ${delay}ms`);
+                reject(delay);
             }
         }, delay);
     });
-        promise.then((message)=>{
+        promise.then((delay)=>{
             iziToast.show({
-                message,
+                message: `✅ Fulfilled promise in ${delay}ms`,
                 position:'topRight',
                 messageColor: '#fff',
                 backgroundColor: '#4CAF50',
                 close: false,
             });
         })
-        .catch((message)=>{
+        .catch((delay)=>{
             iziToast.show({
-                message,
+                message: `❌ Rejected promise in ${delay}ms`,
                 position:'topRight',
                 messageColor: '#fff',
                 backgroundColor: "#F44336",
